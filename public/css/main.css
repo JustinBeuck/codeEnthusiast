@@ -253,7 +253,7 @@ a#scrollUp i{
 }
 
 .search_box input {
-  background: #D0D0CE;
+  background: rgba(225, 225, 225, 0.32);
   border: medium none;
   color: #B2B2B2;
   font-family: 'roboto';
@@ -568,7 +568,7 @@ ul.sub-menu {
 }
 
 .logoImage {
-  height: 30px;
+
 }
 
 
