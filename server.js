@@ -45,7 +45,6 @@ var Email = mongoose.model('Email', {
         // create a email, information comes from AJAX request from Angular
         Email.create({
             text : req.body.text,
-            done : false
         }, function(err, email) {
             if (err)
                 console.log(err);
@@ -60,19 +59,4 @@ var Email = mongoose.model('Email', {
 
     });
 
-    // delete a email
-    app.delete('/api/emails/:email_id', function(req, res) {
-        Email.remove({
-            _id : req.params.email_id
-        }, function(err, email) {
-            if (err)
-                console.log(err);
-
-            // get and return all the emails after you create another
-            Email.find(function(err, emails) {
-                if (err)
-                    console.log(err);
-                res.json(emails);
-            });
-        });
-    });
+    
