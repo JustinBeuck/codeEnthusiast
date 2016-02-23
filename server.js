@@ -38,19 +38,6 @@ var Email = mongoose.model('Email', {
 
 
 // api =====================================================
-    // // get all emails
-    app.get('/api/emails', function(req, res) {
-
-        // use mongoose to get all emails in the database
-        Email.find(function(err, emails) {
-
-            // if there is an error retrieving, send the error. nothing after res.send(err) will execute
-            if (err)
-               console.log(err);
-
-            res.json(emails); // return all emails in JSON format
-        });
-    });
 
     // create email and send back all emails after creation
     app.post('/api/emails', function(req, res) {
