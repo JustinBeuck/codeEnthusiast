@@ -1,0 +1,43 @@
+{
+    "_id": ObjectId("56d2f3132f12b9acbc324f56"),
+    "name": {
+        "first": "Justin",
+        "last": "Beuck"
+    },
+    "signupDate": ISODate("2016-02-28T13:16:03.457Z")
+} {
+    "_id": ObjectId("56d2f3132f12b9acbc324f57"),
+    "name": {
+        "first": "Bill",
+        "last": "Noor"
+    },
+    "signupDate": ISODate("2016-02-28T13:16:03.457Z")
+} {
+    "_id": ObjectId("56d2f3132f12b9acbc324f58"),
+    "name": {
+        "first": "Roger",
+        "last": "Riola"
+    },
+    "signupDate": ISODate("2016-02-28T13:16:03.457Z")
+} {
+    "_id": ObjectId("56d2f3132f12b9acbc324f59"),
+    "name": {
+        "first": "Sara",
+        "last": "Henderson"
+    },
+    "signupDate": ISODate("2016-02-28T13:16:03.457Z")
+} {
+    "_id": ObjectId("56d2f3132f12b9acbc324f5a"),
+    "name": {
+        "first": "Natasha",
+        "last": "Frank"
+    },
+    "signupDate": ISODate("2016-02-28T13:16:03.457Z")
+} {
+    "_id": ObjectId("56d2f3132f12b9acbc324f5b"),
+    "name": {
+        "first": "Nivine",
+        "last": "Strong"
+    },
+    "signupDate": ISODate("2016-02-28T13:16:03.457Z")
+}
