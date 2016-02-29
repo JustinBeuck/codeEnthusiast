@@ -25,7 +25,7 @@ mongoose.connect(db.url); // connect to our mongoDB database (commented out afte
 app.use(methodOverride('X-HTTP-Method-Override')); // override with the X-HTTP-Method-Override header in the request. simulate DELETE/PUT
 
 // routes ==================================================
-require('./app/routes')(app); // pass our application into our routes
+// require('./app/routes')(app); // pass our application into our routes
 
 // start app ===============================================
 app.listen(port);	
@@ -36,28 +36,33 @@ var Email = mongoose.model('Email', {
         text : String
     });
 
-var Apparel = mongoose.model('Apparel', {
-    apparelType : String,
-    prices : Number,
-    "techCompaniesAvail" : Array,
-    "colors" : Array,
-    "availableSizes" : Array
-});
+// var Apparel = mongoose.model('Apparel', {
+//     apparelType : String,
+//     prices : Number,
+//     "techCompaniesAvail" : Array,
+//     "colors" : Array,
+//     "availableSizes" : Array
+// });
 
-app.get('/api/apparel', function(req, res) {
-    console.log(res, req);
-    Apparel.find(function(err, apparel) {
-        if (err) {
-            console.log(err);
-        }
-        console.log(apparel);
-        res.json(apparel);
-    })
-})
+// Apparel.find(function(err, calls) { 
+//   console.log(err, calls, calls.length);  //prints out: null [] 0
+// });
+
+// app.get('/api/apparel', function(req, res) {
+//     console.log(res, req);
+//     Apparel.find(function(err, apparel) {
+//         if (err) {
+//             console.log(err);
+//         }
+//         console.log(apparel);
+//         res.json(apparel);
+//     })
+// })
 
 
 // api =====================================================
     app.get('/api/emails', function(req, res) {
+        console.log('hello');
         // use mongoose to get all emails in the database
         Email.find(function(err, emails) {
             console.log(emails);
@@ -79,6 +84,7 @@ app.get('/api/apparel', function(req, res) {
 
             // get and return all the emails after you create another
             Email.find(function(err, emails) {
+                console.log(emails);
                 if (err) 
                     console.log(err);
                 res.json(emails);
