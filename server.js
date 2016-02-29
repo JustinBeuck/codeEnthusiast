@@ -36,12 +36,40 @@ var Email = mongoose.model('Email', {
         text : String
     });
 
+var Apparel = mongoose.model('Apparel', {
+    apparelType : String,
+    prices : Number,
+    "techCompaniesAvail" : Array,
+    "colors" : Array,
+    "availableSizes" : Array
+});
+
+app.get('/api/apparel', function(req, res) {
+    console.log(res, req);
+    Apparel.find(function(err, apparel) {
+        if (err) {
+            console.log(err);
+        }
+        console.log(apparel);
+        res.json(apparel);
+    })
+})
+
 
 // api =====================================================
+    app.get('/api/emails', function(req, res) {
+        // use mongoose to get all emails in the database
+        Email.find(function(err, emails) {
+            console.log(emails);
+            // if there is an error retrieving, send the error. nothing after res.send(err) will execute
+            if (err)
+                res.send(err)
 
+            res.json(emails); // return all emails in JSON format
+        });
+    });
     // create email and send back all emails after creation
     app.post('/api/emails', function(req, res) {
-
         // create a email, information comes from AJAX request from Angular
         Email.create({
             text : req.body.text,
@@ -51,7 +79,7 @@ var Email = mongoose.model('Email', {
 
             // get and return all the emails after you create another
             Email.find(function(err, emails) {
-                if (err)
+                if (err) 
                     console.log(err);
                 res.json(emails);
             });

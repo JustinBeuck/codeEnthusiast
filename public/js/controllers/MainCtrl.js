@@ -1,4 +1,4 @@
-angular.module('MainCtrl', []).controller('MainController', function($scope, $http, Emails) {
+angular.module('MainCtrl', []).controller('MainController', function($scope, Emails) {
  $scope.formData = {};
     $scope.loading = true;
 

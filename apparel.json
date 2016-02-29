@@ -4,19 +4,19 @@
     "techCompaniesAvail": ["Bower", "Node", "Angular", "Backbone"],
     "colors": ["black", "white"],
     "availableSizes": ["sm", "md", "xl", "2xl"]
-} {
+}, {
     "apparelType": "Hoodie",
     "prices": 30,
     "techCompaniesAvail": ["Bower", "Node", "Angular", "Backbone"],
     "colors": ["red", "black", "white", "orange", "purple"],
     "availableSizes": ["lg", "xl", "2xl"]
-} {
+}, {
     "apparelType": "Womens Fitted Scoop",
     "prices": 20,
     "techCompaniesAvail": ["Bower", "Node", "Angular", "Backbone"],
     "colors": ["blue", "black", "white", "orange", "purple"],
     "availableSizes": ["md", "lg", "xl", "2xl"]
-} {
+}, {
     "apparelType": "V-neck",
     "prices": 22,
     "techCompaniesAvail": ["Bower", "Node", "Angular", "Backbone"],
