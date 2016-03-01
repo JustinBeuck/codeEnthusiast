@@ -7,6 +7,7 @@ angular.module('MainCtrl', []).controller('MainController', function($scope, Ema
     // use the service to get all the emails
     Emails.get()
       .success(function(data) {
+        console.log(data);
         $scope.emails = data;
         $scope.loading = false;
       });

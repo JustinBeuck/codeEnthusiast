@@ -36,36 +36,27 @@ var Email = mongoose.model('Email', {
         text : String
     });
 
-// var Apparel = mongoose.model('Apparel', {
-//     apparelType : String,
-//     prices : Number,
-//     "techCompaniesAvail" : Array,
-//     "colors" : Array,
-//     "availableSizes" : Array
-// });
+var Clothe = mongoose.model('Clothe', {
+    apparelType : String,
+    prices : Number,
+    techCompaniesAvail : Array,
+    colors : Array,
+    availableSizes : Array
+});
 
-// Apparel.find(function(err, calls) { 
-//   console.log(err, calls, calls.length);  //prints out: null [] 0
-// });
-
-// app.get('/api/apparel', function(req, res) {
-//     console.log(res, req);
-//     Apparel.find(function(err, apparel) {
-//         if (err) {
-//             console.log(err);
-//         }
-//         console.log(apparel);
-//         res.json(apparel);
-//     })
-// })
-
+app.get('/api/clothes', function(req, res) {
+    Clothe.find(function(err, clothes) {
+        if (err)
+            res.send(err);
+        
+        res.json(clothes);
+    })
+})
 
 // api =====================================================
     app.get('/api/emails', function(req, res) {
-        console.log('hello');
         // use mongoose to get all emails in the database
         Email.find(function(err, emails) {
-            console.log(emails);
             // if there is an error retrieving, send the error. nothing after res.send(err) will execute
             if (err)
                 res.send(err)
@@ -84,7 +75,6 @@ var Email = mongoose.model('Email', {
 
             // get and return all the emails after you create another
             Email.find(function(err, emails) {
-                console.log(emails);
                 if (err) 
                     console.log(err);
                 res.json(emails);
