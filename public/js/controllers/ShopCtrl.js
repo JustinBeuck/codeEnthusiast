@@ -8,4 +8,5 @@ angular.module('ShopCtrl', []).controller('ShopController', function($scope, Clo
         $scope.clothes = data;
         $scope.loading = false;
     });
+
 });

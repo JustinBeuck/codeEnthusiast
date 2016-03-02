@@ -29,6 +29,11 @@ app.use(methodOverride('X-HTTP-Method-Override')); // override with the X-HTTP-M
 
 // start app ===============================================
 app.listen(port);	
+
+app.get('/shop', function(req, res) {
+    res.sendfile('./public/index.html');
+});
+
 console.log('Magic happens on port ' + port); 			// shoutout to the user
 // exports = module.exports = app; 						// expose app
 
@@ -37,9 +42,9 @@ var Email = mongoose.model('Email', {
     });
 
 var Clothe = mongoose.model('Clothe', {
-    apparelType : String,
+    techCompany : String,
     prices : Number,
-    techCompaniesAvail : Array,
+    apparelType : Array,
     colors : Array,
     availableSizes : Array
 });
