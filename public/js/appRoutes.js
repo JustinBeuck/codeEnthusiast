@@ -1,23 +1,24 @@
-angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+angular.module('appRoutes', []).config(['$routeProvider', function($routeProvider) {
 
 	$routeProvider
 
 		// home page
 		.when('/', {
-			templateUrl: 'views/home.html',
+			templateUrl: '/views/home.html',
 			controller: 'MainController'
 		})
 
 		.when('/shop', {
-			templateUrl: 'views/shop.html',
+			templateUrl: '/views/shop.html',
 			controller: 'ShopController'
 		})
 
 		.when('/geeks', {
 			templateUrl: 'views/geek.html',
 			controller: 'GeekController'	
+		})
+		.otherwise({
+			redirectTo: '/'
 		});
-
-	$locationProvider.html5Mode(true);
 
 }]);
