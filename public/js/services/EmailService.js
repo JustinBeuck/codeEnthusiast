@@ -1,4 +1,5 @@
-angular.module('EmailService', []).factory('Emails', ['$http',function($http) {
+angular.module('EmailService', [])
+  .factory('Emails', ['$http',function($http) {
     return {
       get : function() {
         return $http.get('/api/emails');

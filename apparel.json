@@ -1,25 +1,25 @@
 {
-    "apparelType": "T-Shirt",
+    "techCompany": "Bower",
     "prices": 25,
-    "techCompaniesAvail": ["Bower", "Node", "Angular", "Backbone"],
+    "apparelType": ["T-Shirt", "Hoodie", "Womens Fitted Scoop", "V-neck"],
     "colors": ["black", "white"],
     "availableSizes": ["sm", "md", "xl", "2xl"]
 }, {
-    "apparelType": "Hoodie",
+    "techCompany": "Node",
     "prices": 30,
-    "techCompaniesAvail": ["Bower", "Node", "Angular", "Backbone"],
+    "apparelType": ["T-Shirt", "Hoodie", "Womens Fitted Scoop", "V-neck"],
     "colors": ["red", "black", "white", "orange", "purple"],
     "availableSizes": ["lg", "xl", "2xl"]
 }, {
-    "apparelType": "Womens Fitted Scoop",
+    "techCompany": "Angular",
     "prices": 20,
-    "techCompaniesAvail": ["Bower", "Node", "Angular", "Backbone"],
+    "apparelType": ["T-Shirt", "Hoodie", "Womens Fitted Scoop", "V-neck"],
     "colors": ["blue", "black", "white", "orange", "purple"],
     "availableSizes": ["md", "lg", "xl", "2xl"]
 }, {
-    "apparelType": "V-neck",
+    "techCompany": "Backbone",
     "prices": 22,
-    "techCompaniesAvail": ["Bower", "Node", "Angular", "Backbone"],
+    "apparelType": ["T-Shirt", "Hoodie", "Womens Fitted Scoop", "V-neck"],
     "colors": ["blue", "green", "red", "black", "white"],
     "availableSizes": ["sm", "md", "lg", "xl"]
 }

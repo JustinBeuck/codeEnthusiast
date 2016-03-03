@@ -1,11 +1,12 @@
-angular.module('ShopCtrl', []).controller('ShopController', function($scope, Clothes) {
+angular.module('ShopCtrl', []).controller('ShopController', function($scope, Items) {
 
     $scope.loading = true;
 
-    Clothes.get()
+    Items.get()
       .success(function(data) {
 	      console.log(data);
         $scope.clothes = data;
         $scope.loading = false;
     });
+
 });
