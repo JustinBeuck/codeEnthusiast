@@ -2,8 +2,9 @@ var mongoose = require('mongoose');
 
 module.exports = mongoose.model('Item', {
     techCompany : String,
-    prices : Array,
-    apparelType : Array,
+    prices : Number,
+    apparelType : String,
     colors : Array,
-    availableSizes : Array
+    availableSizes : Array,
+    itemName : String
 });
