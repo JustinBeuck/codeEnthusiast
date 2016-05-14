@@ -42,7 +42,6 @@ module.exports = function (app) {
     // get all items
     app.get('/api/items', function (req, res) {
         Item.find(function (err, items) {
-          console.log(items);
         // if there is an error retrieving, send the error. nothing after res.send(err) will execute
         if (err) 
             res.send(err);
