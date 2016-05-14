@@ -1,5 +1,5 @@
-var Email = require('./models/email');
-var Item  = require('./models/item');
+var Email = require('./models/Email');
+var Item  = require('./models/Item');
 
 function getEmails(res) {
     Email.find(function (err, emails) {
