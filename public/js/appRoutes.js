@@ -17,6 +17,11 @@ angular.module('appRoutes', []).config(['$routeProvider', function($routeProvide
 			templateUrl: 'views/geek.html',
 			controller: 'GeekController'	
 		})
+
+		.when('/login', {
+			templateUrl: 'views/login.html',
+			controller: 'LoginController'	
+		})
 		.otherwise({
 			redirectTo: '/'
 		});
