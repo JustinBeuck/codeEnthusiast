@@ -25,7 +25,9 @@ app.use(methodOverride('X-HTTP-Method-Override')); // override with the X-HTTP-M
 require('./app/routes')(app); // pass our application into our routes
 
 // start app ===============================================
-app.listen(port);	
+app.listen(port, function(){
+	console.log('Listening on port ' + port);
+});	
 
 var port=Number(process.env.PORT || port);			// shoutout to the user
 exports = module.exports = app; 						// expose app
