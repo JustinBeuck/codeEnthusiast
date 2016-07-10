@@ -1439,6 +1439,8 @@ h2.title {
   margin-bottom: 15px;
   margin-top: 15px;
   overflow: hidden;
+  padding-bottom: 15px;
+  background-color:rgba(0, 0, 0, 0.1);
 }
 
 .login-form {
@@ -1459,7 +1461,7 @@ h2.title {
 
 
 .login-form form input, .signup-form form input {
-  background: #D0D0CE;
+  /*background: #D0D0CE;*/
   border: medium none;
   color: #696763;
   display: block;
@@ -1897,8 +1899,12 @@ h2.title {
   background: #A94442;
   border: 0 none;
   border-radius: 0;
-  margin-right: 15px;
+  margin-right: 1px;
   margin-top: 20px;
+}
+
+.btn.btn-default:hover {
+  background-color: #cf4643;
 }
 
 
