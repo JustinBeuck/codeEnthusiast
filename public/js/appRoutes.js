@@ -13,11 +13,6 @@ angular.module('appRoutes', []).config(['$routeProvider', function($routeProvide
 			controller: 'ShopController'
 		})
 
-		.when('/geeks', {
-			templateUrl: 'views/geek.html',
-			controller: 'GeekController'	
-		})
-
 		.when('/login', {
 			templateUrl: 'views/login.html',
 			controller: 'LoginController'	
