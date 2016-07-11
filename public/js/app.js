@@ -1,1 +1,1 @@
-angular.module('sampleApp', ['ngRoute', 'appRoutes', 'MainCtrl', 'ShopCtrl', 'EmailService', 'LoginCtrl', 'ItemService']);
+angular.module('codeApp', ['ngRoute', 'appRoutes', 'MainCtrl', 'ShopCtrl', 'EmailService', 'LoginCtrl', 'ItemService']);
