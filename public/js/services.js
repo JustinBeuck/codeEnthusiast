@@ -1,4 +1,4 @@
-angular.module('myApp').factory('AuthService',
+angular.module('codeApp').factory('AuthService',
 	['$q', '$timeout', '$http', function($q, $timeout, $http) {
 		var user = null;
 
@@ -8,6 +8,10 @@ angular.module('myApp').factory('AuthService',
 		  } else {
 		    return false;
 		  }
+		}
+
+		function getUserStatus() {
+  		return user;
 		}
 
 		function login(username, password) {
@@ -29,7 +33,7 @@ angular.module('myApp').factory('AuthService',
 		      user = false;
 		      deferred.reject();
 		    });
-
+		    console.log(username, password)
 		  return deferred.promise;
 
 		}
