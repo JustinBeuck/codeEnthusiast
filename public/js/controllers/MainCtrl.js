@@ -19,9 +19,9 @@ angular.module('MainCtrl', []).controller('MainController', function($scope, Ema
       // validate the formData to make sure that something is there
       // if form is empty, nothing will happen
       if ($scope.formData.text != undefined) {
-
         // call the create function from our service (returns a promise object)
         Emails.create($scope.formData)
+
 
           // if successful creation, call our get function to get all the new emails
           .success(function(data) {

@@ -3,7 +3,6 @@ var Email = require('./models/email');
 var Item  = require('./models/item');
 
 function getEmails(res) {
-
     Email.find(function (err, emails) {
 
         // if there is an error retrieving, send the error. nothing after res.send(err) will execute

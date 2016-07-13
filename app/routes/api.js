@@ -3,6 +3,8 @@ var router = express.Router();
 var passport = require('passport');
 
 var User = require('../models/user.js');
+var Email = require('../models/email');
+var Item  = require('../models/item');
 
 
 router.post('/register', function(req, res) {
@@ -51,5 +53,10 @@ router.get('/logout', function(req, res) {
   });
 });
 
+router.get('/api/emails', function(req, res) {
+  res.status(200).json({
+    status: 'logged out!'
+  });
+});
 
 module.exports = router;

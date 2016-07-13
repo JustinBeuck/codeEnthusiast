@@ -4,7 +4,6 @@ angular.module('ShopCtrl', []).controller('ShopController', function($scope, Ite
 
     Items.get()
       .success(function(data) {
-	      console.log(data);
         $scope.clothes = data;
         $scope.loading = false;
     });
