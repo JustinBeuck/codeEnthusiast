@@ -46,7 +46,7 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 // routes
-require('./app/routes')(app);
+require('./app/routes/routes')(app);
 app.use('/user/', routes);
 
 app.get('/', function(req, res) {
